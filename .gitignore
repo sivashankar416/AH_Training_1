@@ -1,0 +1,13 @@
+# Ignore large dataset and trained model files
+data/
+models/
+*.bz2
+*.ft.txt
+*.csv
+*.pkl
+
+# Python virtual environment & cache
+__pycache__/
+*.pyc
+.env
+.ipynb_checkpoints/
