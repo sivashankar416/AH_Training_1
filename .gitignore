@@ -1,4 +1,4 @@
-# Ignore large dataset and trained model files
+# Ignore large datasets and trained model files
 data/
 models/
 *.bz2
@@ -6,8 +6,15 @@ models/
 *.csv
 *.pkl
 
-# Python virtual environment & cache
+# Python cache / environments
 __pycache__/
+.pytest_cache/
 *.pyc
+.venv/
+venv/
 .env
 .ipynb_checkpoints/
+
+# Keep final submission CSV
+!submissions/
+!submissions/*.csv

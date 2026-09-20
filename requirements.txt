@@ -1,0 +1,9 @@
+pandas
+numpy
+beautifulsoup4
+nltk
+tqdm
+pytest
+matplotlib
+scikit-learn
+scipy
