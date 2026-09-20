@@ -39,9 +39,13 @@ class ReviewPreprocessor:
                     continue
                 
                 raw_label, content = parts[0], parts[1]
-                
-                # Map fastText label: __label__1 -> 1, __label__2 -> 2 (or 1 to 5 scale mapping)
-                label_val = 1 if '__label__1' in raw_label else 5
+
+                # Reject malformed or unsupported labels
+                if raw_label not in {"__label__1", "__label__2"}:
+                    continue
+
+                # Map fastText labels
+                label_val = 1 if raw_label == "__label__1" else 5
                 
                 # Split title and body if separated by colon
                 if ':' in content:
